@@ -2,15 +2,13 @@
 	visibility: hidden;
 }
 
-body,
-button,
-input,
-select,
-textarea {
+body {
 	color: $color__text-main;
-	font-family: $font__main;
-	@include font-size(1);
-	line-height: $font__line-height-body;
+	font: {
+		family: $font__main;
+		size: 100%;
+		weight: 300;
+	}
 }
 
 @import "headings";
