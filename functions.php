@@ -51,6 +51,9 @@ function tdandpartners_setup() {
 		'gallery',
 		'caption',
 	) );
+
+	// Add theme custom logo support.
+	add_theme_support( 'custom-logo' );
 }
 endif;
 add_action( 'after_setup_theme', 'tdandpartners_setup' );

@@ -23,17 +23,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Layout
 # Typography
 # Elements
 # Forms
 # Navigation
 	## Links
-	## Menus
 # Accessibility
 # Alignments
 # Clearings
 # Widgets
 # Content
+	## Site Header
 	## Posts and pages
 	## Comments
 # Infinite scroll
@@ -217,12 +218,27 @@ th {
   padding: 0; }
 
 /*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.inner {
+  max-width: 1180px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  @media screen and (min-width: 1140px) {
+    .inner {
+      margin: 0 auto; } }
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 .wf-loading {
   visibility: hidden; }
 
-body {
+body,
+button,
+input,
+select,
+textarea {
   color: #444444;
   font-family: "proxima-nova", sans-serif;
   font-size: 100%;
@@ -301,7 +317,7 @@ h4 {
   h4 {
     line-height: 1.22222222;
     /* (22px / 18px */ } }
-#page {
+.site {
   font-size: 16px;
   font-size: 1rem;
   /* equivalent to 16px */
@@ -309,7 +325,7 @@ h4 {
   /* equivalent to 20px */ }
 
 @media (min-width: 43.75em) {
-  #page {
+  .site {
     font-size: 16px;
     font-size: 1rem;
     /* equivalent to 16px */
@@ -511,71 +527,6 @@ a {
     outline: 0; }
 
 /*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-
-  .main-navigation ul {
-    display: block; } }
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
-
-/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -667,6 +618,64 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Site Header
+--------------------------------------------------------------*/
+.site-header {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .site-header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+.site-header__logo img {
+  width: 100px; }
+
+.main-navigation {
+  font-family: "nimbus-sans-extended", sans-serif; }
+  .main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0 0 0 -20px;
+    padding-left: 0; }
+    .main-navigation ul li {
+      display: inline-block;
+      margin-left: 20px; }
+      .main-navigation ul li:hover > a, .main-navigation ul li.focus > a {
+        font-weight: 700; }
+  .main-navigation a {
+    display: block;
+    text-decoration: none; }
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block; }
+
+@media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none; }
+
+  .main-navigation ul {
+    display: block; } }
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
