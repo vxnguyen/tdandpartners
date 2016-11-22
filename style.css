@@ -35,8 +35,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Widgets
 # Content
 	## Site Header
-	## Posts and pages
-	## Comments
+	## Hero
+	## Footer
 # Infinite scroll
 # Media
 	## Captions
@@ -317,20 +317,28 @@ h4 {
   h4 {
     line-height: 1.22222222;
     /* (22px / 18px */ } }
-.site {
+.site, .hero p {
   font-size: 16px;
   font-size: 1rem;
   /* equivalent to 16px */
   line-height: 1.25;
   /* equivalent to 20px */ }
+  @media (min-width: 43.75em) {
+    .site, .hero p {
+      font-size: 16px;
+      font-size: 1rem;
+      /* equivalent to 16px */
+      line-height: 1.375;
+      /* equivalent to 22px */ } }
 
 @media (min-width: 43.75em) {
-  .site {
-    font-size: 16px;
-    font-size: 1rem;
+  .hero p {
+    font-size: 19.2px;
+    font-size: 1.2rem;
     /* equivalent to 16px */
     line-height: 1.375;
     /* equivalent to 22px */ } }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -635,26 +643,31 @@ a {
 .main-navigation {
   font-family: "nimbus-sans-extended", sans-serif; }
   .main-navigation ul {
-    display: none;
-    list-style: none;
+    position: absolute;
+    top: 115px;
+    left: 0;
+    width: 100%;
+    max-height: 0;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    overflow: hidden;
+    list-style: none;
+    background-color: #FFFFFF;
+    -webkit-transition: max-height .8s;
+    -moz-transition: max-height .8s;
+    transition: max-height .8s; }
     .main-navigation ul li {
-      display: inline-block;
-      padding: 0 20px;
-      border-right: 1px solid #cccccc; }
-      .main-navigation ul li:first-child {
-        padding-left: 0; }
-      .main-navigation ul li:last-child {
-        padding-right: 0;
-        border-right: none; }
+      display: block;
+      margin-bottom: 20px;
+      text-align: center; }
       .main-navigation ul li > a {
-        color: #2574A9; }
-      .main-navigation ul li:hover > a, .main-navigation ul li.focus > a {
-        color: #EF4836; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+        display: inline-block;
+        text-decoration: none;
+        color: #2574A9;
+        transition: color .2s; }
+        .main-navigation ul li > a:hover, .main-navigation ul li > a.focus {
+          color: #EF4836;
+          transition: color .2s; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
@@ -662,68 +675,80 @@ a {
     color: #EF4836;
     font-weight: 700; }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
+/* Mobile menu hamburger icon */
+.menu-toggle {
+  border: none;
+  background-color: #FFFFFF;
+  box-shadow: none; }
+  .menu-toggle > div {
+    width: 24px;
+    height: 4px;
+    background-color: #444444;
+    margin: 4px 0; }
 
-@media screen and (min-width: 37.5em) {
+/* Mobile menu */
+.main-navigation.toggled ul {
+  max-height: 240px;
+  -webkit-transition: max-height .8s;
+  -moz-transition: max-height .8s;
+  transition: max-height .8s; }
+
+@media screen and (min-width: 53.125em) {
   .menu-toggle {
     display: none; }
 
   .main-navigation ul {
-    display: block; } }
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
+    position: relative;
+    top: 0;
+    max-height: inherit;
+    width: inherit;
+    overflow: visible; }
+    .main-navigation ul li {
+      display: inline-block;
+      margin: inherit;
+      padding: 0 10px;
+      border-right: 1px solid #CCCCCC; }
+      .main-navigation ul li:first-child {
+        padding-left: 0; }
+      .main-navigation ul li:last-child {
+        border-right: none;
+        padding-right: 0; } }
+/*--------------------------------------------------------------
+## Hero
+--------------------------------------------------------------*/
+.hero {
+  height: 550px; }
+  .hero .inner {
+    padding-top: 60px;
+    color: #FFFFFF; }
+
+.site-front-page .hero {
+  background: url("images/front-page-hero.jpg") left top/cover no-repeat; }
+  .site-front-page .hero .hero__content {
+    max-width: 400px; }
+    @media screen and (min-width: 43.75em) {
+      .site-front-page .hero .hero__content {
+        max-width: 500px; } }
 
 /*--------------------------------------------------------------
-## Posts and pages
+## Footer
 --------------------------------------------------------------*/
-.sticky {
-  display: block; }
+.site-footer {
+  background: #EDEFF0;
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
-.hentry {
-  margin: 0 0 1.5em; }
-
-.byline,
-.updated:not(.published) {
-  display: none; }
-
-.single .byline,
-.group-blog .byline {
-  display: inline; }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0; }
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em; }
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word; }
-
-.bypostauthor {
-  display: block; }
+.site-footer__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 20px; }
+  .site-footer__info > div:first-child {
+    width: 100px;
+    margin: 0 auto; }
+  .site-footer__info > div:last-child {
+    text-align: center;
+    border-bottom: 1px solid #EF4836; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

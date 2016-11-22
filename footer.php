@@ -14,11 +14,43 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tdandpartners' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'tdandpartners' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'tdandpartners' ), 'tdandpartners', '<a href="https://github.com/vxnguyen" rel="designer">Vinh Nguyen</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="inner">
+			<div class="site-footer__info">
+				<div>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" alt="<?php bloginfo( 'name' ); ?>"><?php the_custom_logo(); ?>
+				</div>
+				<div>
+					<p>We seek exceptional returns on invested capital by maximizing the use of financial incentives and subsidies. We combine empirical researched data, and superior understanding of hyper local political, economic and social knowledge of the market, to create financially successful projects.</p>
+				</div>
+			</div><!-- .site-info -->
+
+			<?php $args = array(
+				'post_type' => 'contact'
+				);
+				
+				$the_query = new WP_Query( $args );
+			?>
+
+
+			<div class="site-footer__contact">
+				<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<div>
+						<img src="">
+						<p><?php the_field('contact-email'); ?></p>
+					</div>
+
+					<div>
+						<img src="">
+						<p><?php the_field('contact-phone'); ?></p>
+					</div>
+
+					<div>
+						<img src="">
+						<p><?php the_field('contact-address'); ?></p>
+					</div>
+				<?php endwhile; wp_reset_query(); ?>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

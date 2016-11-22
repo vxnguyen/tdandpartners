@@ -1,17 +1,26 @@
 .site {
-  @include font-size(1);
-  /* equivalent to 16px */
-  line-height: 1.25;
-  /* equivalent to 20px */
+	@include font-size(1);
+  	/* equivalent to 16px */
+  	line-height: 1.25;
+  	/* equivalent to 20px */
+
+  	@media ( min-width: 43.75em ) {
+  		@include font-size(1);
+    	/* equivalent to 16px */
+   		line-height: 1.375;
+   		/* equivalent to 22px */
+ 	}
 }
 
-@media (min-width: 43.75em) {
-  .site {
-    @include font-size(1);
-    /* equivalent to 16px */
-    line-height: 1.375;
-    /* equivalent to 22px */
-  }
+.hero p {
+	@extend .site;
+
+	@media ( min-width: 43.75em ) {
+		@include font-size(1.2);
+		/* equivalent to 16px */
+		line-height: 1.375;
+		/* equivalent to 22px */
+	}
 }
 
 p {
