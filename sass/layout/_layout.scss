@@ -1,0 +1,11 @@
+.inner {
+	max-width: 1180px;
+	padding: {
+		left: 20px;
+		right: 20px;
+	}
+	
+	@media screen and ( min-width: 1140px ) {
+		margin: 0 auto;
+	}
+}

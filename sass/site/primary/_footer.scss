@@ -1,0 +1,24 @@
+.site-footer {
+	background: $color__background-footer;
+	padding: {
+		top: 40px;
+		bottom: 40px;
+	}
+}
+
+.site-footer__info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-right: 20px;
+
+	> div:first-child {
+		width: 100px;
+		margin: 0 auto;
+	}
+
+	> div:last-child {
+		text-align: center;
+		border-bottom: 1px solid $color__border-secondary;
+	}
+}

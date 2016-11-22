@@ -1,0 +1,20 @@
+.hero {
+	height: 550px;
+
+	.inner {
+		padding-top: 60px;
+		color: $color__text-inverted;
+	}
+}
+
+.site-front-page .hero {
+	background: url('images/front-page-hero.jpg') left top/cover no-repeat;
+
+	.hero__content {
+		max-width: 400px;
+
+		@media screen and ( min-width: 43.75em ) {
+			max-width: 500px;
+		}
+	}
+}
