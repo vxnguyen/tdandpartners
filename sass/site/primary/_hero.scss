@@ -8,7 +8,22 @@
 }
 
 .site-front-page .hero {
-	background: url('images/front-page-hero.jpg') left top/cover no-repeat;
+	@include retina('images/front-page-hero_500.jpg', 2, cover, left top/cover no-repeat);
+
+	// 500px
+	@media screen and ( min-width: 31.25em ) {
+		@include retina('images/front-page-hero_700.jpg', 2, cover, left top/cover no-repeat);
+	}
+
+	// 700px
+	@media screen and ( min-width: 43.75em ) {
+		@include retina('images/front-page-hero_1200.jpg', 2, cover, left top/cover no-repeat);
+	}
+
+	// 1200px
+	@media screen and ( min-width: 75em ) {
+		@include retina('images/front-page-hero_2000.jpg', 2, cover, left top/cover no-repeat);
+	}
 
 	.hero__content {
 		max-width: 400px;

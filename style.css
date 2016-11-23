@@ -735,7 +735,151 @@ a {
     color: #FFFFFF; }
 
 .site-front-page .hero {
-  background: url("images/front-page-hero.jpg") left top/cover no-repeat; }
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+   * Set a base background for 1x environments.
+   */
+  background: url("images/front-page-hero_500.jpg") left top/cover no-repeat;
+  background-size: cover;
+  /*
+   * Create an @2x-ish media query.
+   */
+  /*
+   * Create media queries for all environments that the user has
+   * provided images for.
+   */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */ }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .site-front-page .hero {
+      background: url("images/front-page-hero_500@2x.jpg") left top/cover no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .site-front-page .hero {
+      background: url("images/front-page-hero_500@2x.jpg") left top/cover no-repeat;
+      background-size: cover; } }
+  @media screen and (min-width: 31.25em) {
+    .site-front-page .hero {
+      /*
+       * Set a counter and get the length of the image path.
+       */
+      /*
+       * Loop ver the image path and figure out the
+       * position of the dot where the extension begins.
+       */
+      /*
+       * If we were able to figure out where the extension is,
+       * slice the path into a base and an extension. Use that to
+       * calculate urls for different density environments. Set
+       * values for different environments.
+       */
+      /*
+       * Set a base background for 1x environments.
+       */
+      background: url("images/front-page-hero_700.jpg") left top/cover no-repeat;
+      background-size: cover;
+      /*
+       * Create an @2x-ish media query.
+       */
+      /*
+       * Create media queries for all environments that the user has
+       * provided images for.
+       */
+      /*
+       * If anything went wrong trying to separate the file from its
+       * extension, set a background value without doing anything to it.
+       */ } }
+  @media screen and (min-width: 31.25em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 31.25em) and (min-resolution: 192dpi) {
+    .site-front-page .hero {
+      background: url("images/front-page-hero_700@2x.jpg") left top/cover no-repeat;
+      background-size: cover; } }
+
+  @media screen and (min-width: 43.75em) {
+    .site-front-page .hero {
+      /*
+       * Set a counter and get the length of the image path.
+       */
+      /*
+       * Loop ver the image path and figure out the
+       * position of the dot where the extension begins.
+       */
+      /*
+       * If we were able to figure out where the extension is,
+       * slice the path into a base and an extension. Use that to
+       * calculate urls for different density environments. Set
+       * values for different environments.
+       */
+      /*
+       * Set a base background for 1x environments.
+       */
+      background: url("images/front-page-hero_1200.jpg") left top/cover no-repeat;
+      background-size: cover;
+      /*
+       * Create an @2x-ish media query.
+       */
+      /*
+       * Create media queries for all environments that the user has
+       * provided images for.
+       */
+      /*
+       * If anything went wrong trying to separate the file from its
+       * extension, set a background value without doing anything to it.
+       */ } }
+  @media screen and (min-width: 43.75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 43.75em) and (min-resolution: 192dpi) {
+    .site-front-page .hero {
+      background: url("images/front-page-hero_1200@2x.jpg") left top/cover no-repeat;
+      background-size: cover; } }
+
+  @media screen and (min-width: 75em) {
+    .site-front-page .hero {
+      /*
+       * Set a counter and get the length of the image path.
+       */
+      /*
+       * Loop ver the image path and figure out the
+       * position of the dot where the extension begins.
+       */
+      /*
+       * If we were able to figure out where the extension is,
+       * slice the path into a base and an extension. Use that to
+       * calculate urls for different density environments. Set
+       * values for different environments.
+       */
+      /*
+       * Set a base background for 1x environments.
+       */
+      background: url("images/front-page-hero_2000.jpg") left top/cover no-repeat;
+      background-size: cover;
+      /*
+       * Create an @2x-ish media query.
+       */
+      /*
+       * Create media queries for all environments that the user has
+       * provided images for.
+       */
+      /*
+       * If anything went wrong trying to separate the file from its
+       * extension, set a background value without doing anything to it.
+       */ } }
+  @media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi) {
+    .site-front-page .hero {
+      background: url("images/front-page-hero_2000@2x.jpg") left top/cover no-repeat;
+      background-size: cover; } }
+
   .site-front-page .hero .hero__content {
     max-width: 400px; }
     @media screen and (min-width: 43.75em) {
