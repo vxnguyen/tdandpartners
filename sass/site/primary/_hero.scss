@@ -5,24 +5,28 @@
 		padding-top: 60px;
 		color: $color__text-inverted;
 	}
+
+	h1 {
+		color: $color__text-inverted;
+	}
 }
 
 .site-front-page .hero {
-	@include retina('images/front-page-hero_500.jpg', 2, cover, left top/cover no-repeat);
+	@include retina('images/front-page-hero_500.jpg', 2, cover, left top no-repeat);
 
 	// 500px
 	@media screen and ( min-width: 31.25em ) {
-		@include retina('images/front-page-hero_700.jpg', 2, cover, left top/cover no-repeat);
+		@include retina('images/front-page-hero_700.jpg', 2, cover, left top no-repeat);
 	}
 
 	// 700px
 	@media screen and ( min-width: 43.75em ) {
-		@include retina('images/front-page-hero_1200.jpg', 2, cover, left top/cover no-repeat);
+		@include retina('images/front-page-hero_1200.jpg', 2, cover, left top no-repeat);
 	}
 
 	// 1200px
 	@media screen and ( min-width: 75em ) {
-		@include retina('images/front-page-hero_2000.jpg', 2, cover, left top/cover no-repeat);
+		@include retina('images/front-page-hero_2000.jpg', 2, cover, left top no-repeat);
 	}
 
 	.hero__content {

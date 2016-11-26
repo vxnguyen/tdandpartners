@@ -114,9 +114,17 @@
 	}
 }
 
+.page-header {
+	text-align: center;
+	max-width: 700px;
+	margin: 60px auto;
 
-
-
-
-
-
+	p {
+		margin: 0;
+		padding: 20px 0;
+		border: {
+			top: 1px solid $color__border-main;
+			bottom: 1px solid $color__border-main;
+		}
+	}
+}

@@ -34,19 +34,20 @@
 
 			<div class="site-footer__contact">
 				<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<h4>Contact</h4>
 					<div>
-						<img src="">
-						<p><?php the_field('contact-email'); ?></p>
+						<div class="site-footer__icon"><img src="<?php echo get_template_directory_uri(); ?>/images/email-icon.png" data-rjs="2"></div>
+						<a href="mailto:<?php the_field('contact-email'); ?>"><?php the_field('contact-email'); ?></a>
 					</div>
 
 					<div>
-						<img src="">
-						<p><?php the_field('contact-phone'); ?></p>
+						<div class="site-footer__icon"><img src="<?php echo get_template_directory_uri(); ?>/images/phone-icon.png" data-rjs="2"></div>
+						<a href="tel:<?php the_field('contact-phone'); ?>"><?php the_field('contact-phone'); ?></a>
 					</div>
 
 					<div>
-						<img src="">
-						<p><?php the_field('contact-address'); ?></p>
+						<div class="site-footer__icon"><img src="<?php echo get_template_directory_uri(); ?>/images/address-icon.png" data-rjs="2"></div>
+						<address><?php the_field('contact-address'); ?></address>
 					</div>
 				<?php endwhile; wp_reset_query(); ?>
 			</div>

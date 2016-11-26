@@ -94,6 +94,8 @@ add_action( 'widgets_init', 'tdandpartners_widgets_init' );
 function tdandpartners_scripts() {
 	wp_enqueue_style( 'tdandpartners-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'tdandpartners-retina', get_template_directory_uri() . '/js/retina.min.js', array(), '20161123', true );
+
 	wp_enqueue_script( 'tdandpartners-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'tdandpartners-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

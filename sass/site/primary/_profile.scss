@@ -1,0 +1,135 @@
+.infographic {
+	margin-bottom: 7.5em;
+	margin-top: 7.5em;
+
+	p {
+		margin: 0;
+	}
+}
+
+.infographic__block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	> div {
+		width: 300px;
+		margin: 0 10px 1.5em 10px;
+		text-align: center;
+
+		// 700pxx
+		@media screen and ( min-width: 43.75em ) {
+			text-align: justify;
+		}
+	}
+
+	> div:first-child {
+		display: none;
+
+		// 700px
+		@media screen and ( min-width: 43.75em ) {
+			display: block;
+		}
+	}
+}
+
+.infographic__bar {
+	height: 50px;
+	background: $color__background-secondary;
+	float: right;
+}
+
+.infographic__bar.bar-1 {
+	width: 300px;
+}
+
+.infographic__bar.bar-2 {
+	width: 100px;
+}
+
+.infographic__bar.bar-3 {
+	width: 20px;
+}
+
+.infographic__buildings {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 40px;
+	text-align: center;
+
+	> div {
+		margin-bottom: 20px;
+		width: 100%;
+
+		// 700px
+		@media screen and ( min-width: 43.75em ) {
+			width: auto;
+			margin: 0 20px;
+		}
+	}
+
+	img {
+		display: none;
+
+		// 500px
+		@media screen and ( min-width: 31.25em ) {
+			display: inline-block;
+		}
+	}
+}
+
+.core-competencies {
+	@include retina('images/core-competencies-bg_500.jpg', 2, cover, center top no-repeat);
+
+	// 500px
+	@media screen and ( min-width: 31.25em ) {
+		@include retina('images/core-competencies-bg_700.jpg', 2, cover, center top no-repeat);
+	}
+
+	// 700px
+	@media screen and ( min-width: 43.75em ) {
+		@include retina('images/core-competencies-bg_1200.jpg', 2, cover, center top no-repeat);
+	}
+
+	// 1200px
+	@media screen and ( min-width: 75em ) {
+		@include retina('images/core-competencies-bg_2000.jpg', 2, cover, center top no-repeat);
+	}
+
+	color: $color__text-inverted;
+
+	.overlay {
+		background: $color__background-overlay;
+		height: 100%;
+	}
+
+	.inner {
+		text-align: center;
+		padding: {
+			top: 3.75em;
+			bottom: 3.75em;
+		}
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	ul {
+		margin: 0 -20px 0 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+			margin: {
+				bottom: 20px;
+				right: 20px;
+			}
+			padding: .3em;
+			border: 1px solid #FFFFFF;
+		}
+	}
+
+}

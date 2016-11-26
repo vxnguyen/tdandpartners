@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying a message that posts cannot be found.
+ * Template part for displaying the page header.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -12,9 +12,9 @@
 <section class="page-header">
 	<div class="inner">
 		<h1><?php echo get_the_title(); ?></h1>
-		
-		<?php if ( the_field('page-description') ) : ?>
+
+		<?php if( get_field('page-description') ): ?>
 			<p><?php the_field('page-description'); ?></p>
-		<?php endif;?>
+		<?php endif; ?>
 	</div>
 </section>
