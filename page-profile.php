@@ -80,12 +80,7 @@ get_header(); ?>
 					<div class="inner">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/core-competencies-icon.png" alt="Core Competencies Icon" data-rjs="2">
 						<h2>Core Competencies</h2>
-						<ul>
-							<li>SITE SELECTION AND ACQUISITIONS</li>
-							<li>MUNICIPAL APPROVALS</li>
-							<li>FINANCIAL STRUCTURING</li>
-							<li>LEASE UP MANAGEMENT</li>
-						</ul>
+						<?php the_field('core-competencies'); ?>
 					</div>
 				</div>
 			</section>
