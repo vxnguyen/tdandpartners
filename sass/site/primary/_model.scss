@@ -1,0 +1,44 @@
+.expertise {
+	margin: {
+		top: 7.5em;
+		bottom: 7.5em;
+	}
+
+	@include retina('images/expertise-bg_500.jpg', 2, cover, center top no-repeat);
+
+	// 500px
+	@media screen and ( min-width: 31.25em ) {
+		@include retina('images/expertise-bg_700.jpg', 2, cover, center top no-repeat);
+	}
+
+	// 700px
+	@media screen and ( min-width: 43.75em ) {
+		@include retina('images/expertise-bg_1200.jpg', 2, cover, center top no-repeat);
+	}
+
+	// 1200px
+	@media screen and ( min-width: 75em ) {
+		@include retina('images/expertise-bg_2000.jpg', 2, cover, center top no-repeat);
+	}
+
+	.big {
+		color: $color__text-inverted;
+	}
+}
+
+.proven-model {
+	margin-bottom: 7.5em;
+
+	.header {
+		border-bottom: 1px solid $color__border-secondary;
+
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+
+	ul {
+		margin: 0;
+		list-style-type: square;
+	}
+}

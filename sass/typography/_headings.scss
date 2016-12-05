@@ -36,6 +36,7 @@ h2 {
   /* 1.625x body copy size = 26px */
   line-height: 1.15384615;
   /* 30px / 26px */
+  color: $color__text-heading;
 }
 
 @media (min-width: 43.75em) {

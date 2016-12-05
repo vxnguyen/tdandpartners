@@ -32,29 +32,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
-# Widgets
 # Content
 	## Site Header
+	## Banner
 	## Hero
 	## Profile
+	## Model
+	## Community Impact
 	## Footer
 # Infinite scroll
 # Media
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-/**
- * Allows you to use retina images at various pixel densities.
- * Examples:
- *
- *   @include retina(/images/mypic.jpg, 2);
- *   @include retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
- *
- * @param  {Value}  $path               The path to the file name minus extension.
- * @param  {Number} $cap:    2          The highest pixel density level images exist for.
- * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
- * @param  {Value}  $extras: null       Any other `background` values to be added.
- */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -288,7 +278,8 @@ h2 {
   font-size: 1.625rem;
   /* 1.625x body copy size = 26px */
   line-height: 1.15384615;
-  /* 30px / 26px */ }
+  /* 30px / 26px */
+  color: #2574A9; }
 
 @media (min-width: 43.75em) {
   h2 {
@@ -631,15 +622,6 @@ a {
   clear: both; }
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */ }
-  .widget select {
-    max-width: 100%; }
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -740,6 +722,21 @@ a {
     border-bottom: 1px solid #CCCCCC; }
 
 /*--------------------------------------------------------------
+## Site Header
+--------------------------------------------------------------*/
+.banner {
+  color: #FFFFFF; }
+  .banner h2 {
+    color: #FFFFFF; }
+  .banner .overlay {
+    background: rgba(37, 116, 169, 0.8);
+    height: 100%; }
+  .banner .inner {
+    text-align: center;
+    padding-top: 3.75em;
+    padding-bottom: 3.75em; }
+
+/*--------------------------------------------------------------
 ## Hero
 --------------------------------------------------------------*/
 .hero {
@@ -751,35 +748,8 @@ a {
     color: #FFFFFF; }
 
 .site-front-page .hero {
-  /*
-   * Set a counter and get the length of the image path.
-   */
-  /*
-   * Loop ver the image path and figure out the
-   * position of the dot where the extension begins.
-   */
-  /*
-   * If we were able to figure out where the extension is,
-   * slice the path into a base and an extension. Use that to
-   * calculate urls for different density environments. Set
-   * values for different environments.
-   */
-  /*
-   * Set a base background for 1x environments.
-   */
   background: url("images/front-page-hero_500.jpg") left top no-repeat;
-  background-size: cover;
-  /*
-   * Create an @2x-ish media query.
-   */
-  /*
-   * Create media queries for all environments that the user has
-   * provided images for.
-   */
-  /*
-   * If anything went wrong trying to separate the file from its
-   * extension, set a background value without doing anything to it.
-   */ }
+  background-size: cover; }
   @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
     .site-front-page .hero {
       background: url("images/front-page-hero_500@2x.jpg") left top no-repeat;
@@ -790,35 +760,8 @@ a {
       background-size: cover; } }
   @media screen and (min-width: 31.25em) {
     .site-front-page .hero {
-      /*
-       * Set a counter and get the length of the image path.
-       */
-      /*
-       * Loop ver the image path and figure out the
-       * position of the dot where the extension begins.
-       */
-      /*
-       * If we were able to figure out where the extension is,
-       * slice the path into a base and an extension. Use that to
-       * calculate urls for different density environments. Set
-       * values for different environments.
-       */
-      /*
-       * Set a base background for 1x environments.
-       */
       background: url("images/front-page-hero_700.jpg") left top no-repeat;
-      background-size: cover;
-      /*
-       * Create an @2x-ish media query.
-       */
-      /*
-       * Create media queries for all environments that the user has
-       * provided images for.
-       */
-      /*
-       * If anything went wrong trying to separate the file from its
-       * extension, set a background value without doing anything to it.
-       */ } }
+      background-size: cover; } }
   @media screen and (min-width: 31.25em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 31.25em) and (min-resolution: 192dpi) {
     .site-front-page .hero {
       background: url("images/front-page-hero_700@2x.jpg") left top no-repeat;
@@ -826,35 +769,8 @@ a {
 
   @media screen and (min-width: 43.75em) {
     .site-front-page .hero {
-      /*
-       * Set a counter and get the length of the image path.
-       */
-      /*
-       * Loop ver the image path and figure out the
-       * position of the dot where the extension begins.
-       */
-      /*
-       * If we were able to figure out where the extension is,
-       * slice the path into a base and an extension. Use that to
-       * calculate urls for different density environments. Set
-       * values for different environments.
-       */
-      /*
-       * Set a base background for 1x environments.
-       */
       background: url("images/front-page-hero_1200.jpg") left top no-repeat;
-      background-size: cover;
-      /*
-       * Create an @2x-ish media query.
-       */
-      /*
-       * Create media queries for all environments that the user has
-       * provided images for.
-       */
-      /*
-       * If anything went wrong trying to separate the file from its
-       * extension, set a background value without doing anything to it.
-       */ } }
+      background-size: cover; } }
   @media screen and (min-width: 43.75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 43.75em) and (min-resolution: 192dpi) {
     .site-front-page .hero {
       background: url("images/front-page-hero_1200@2x.jpg") left top no-repeat;
@@ -862,35 +778,8 @@ a {
 
   @media screen and (min-width: 75em) {
     .site-front-page .hero {
-      /*
-       * Set a counter and get the length of the image path.
-       */
-      /*
-       * Loop ver the image path and figure out the
-       * position of the dot where the extension begins.
-       */
-      /*
-       * If we were able to figure out where the extension is,
-       * slice the path into a base and an extension. Use that to
-       * calculate urls for different density environments. Set
-       * values for different environments.
-       */
-      /*
-       * Set a base background for 1x environments.
-       */
       background: url("images/front-page-hero_2000.jpg") left top no-repeat;
-      background-size: cover;
-      /*
-       * Create an @2x-ish media query.
-       */
-      /*
-       * Create media queries for all environments that the user has
-       * provided images for.
-       */
-      /*
-       * If anything went wrong trying to separate the file from its
-       * extension, set a background value without doing anything to it.
-       */ } }
+      background-size: cover; } }
   @media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi) {
     .site-front-page .hero {
       background: url("images/front-page-hero_2000@2x.jpg") left top no-repeat;
@@ -946,7 +835,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 40px;
   text-align: center; }
   .infographic__buildings > div {
     margin-bottom: 20px;
@@ -960,38 +848,13 @@ a {
     @media screen and (min-width: 31.25em) {
       .infographic__buildings img {
         display: inline-block; } }
+  @media screen and (min-width: 43.75em) {
+    .infographic__buildings {
+      margin-top: 40px; } }
 
 .core-competencies {
-  /*
-   * Set a counter and get the length of the image path.
-   */
-  /*
-   * Loop ver the image path and figure out the
-   * position of the dot where the extension begins.
-   */
-  /*
-   * If we were able to figure out where the extension is,
-   * slice the path into a base and an extension. Use that to
-   * calculate urls for different density environments. Set
-   * values for different environments.
-   */
-  /*
-   * Set a base background for 1x environments.
-   */
   background: url("images/core-competencies-bg_500.jpg") center top no-repeat;
-  background-size: cover;
-  /*
-   * Create an @2x-ish media query.
-   */
-  /*
-   * Create media queries for all environments that the user has
-   * provided images for.
-   */
-  /*
-   * If anything went wrong trying to separate the file from its
-   * extension, set a background value without doing anything to it.
-   */
-  color: #FFFFFF; }
+  background-size: cover; }
   @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
     .core-competencies {
       background: url("images/core-competencies-bg_500@2x.jpg") center top no-repeat;
@@ -1002,35 +865,8 @@ a {
       background-size: cover; } }
   @media screen and (min-width: 31.25em) {
     .core-competencies {
-      /*
-       * Set a counter and get the length of the image path.
-       */
-      /*
-       * Loop ver the image path and figure out the
-       * position of the dot where the extension begins.
-       */
-      /*
-       * If we were able to figure out where the extension is,
-       * slice the path into a base and an extension. Use that to
-       * calculate urls for different density environments. Set
-       * values for different environments.
-       */
-      /*
-       * Set a base background for 1x environments.
-       */
       background: url("images/core-competencies-bg_700.jpg") center top no-repeat;
-      background-size: cover;
-      /*
-       * Create an @2x-ish media query.
-       */
-      /*
-       * Create media queries for all environments that the user has
-       * provided images for.
-       */
-      /*
-       * If anything went wrong trying to separate the file from its
-       * extension, set a background value without doing anything to it.
-       */ } }
+      background-size: cover; } }
   @media screen and (min-width: 31.25em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 31.25em) and (min-resolution: 192dpi) {
     .core-competencies {
       background: url("images/core-competencies-bg_700@2x.jpg") center top no-repeat;
@@ -1038,35 +874,8 @@ a {
 
   @media screen and (min-width: 43.75em) {
     .core-competencies {
-      /*
-       * Set a counter and get the length of the image path.
-       */
-      /*
-       * Loop ver the image path and figure out the
-       * position of the dot where the extension begins.
-       */
-      /*
-       * If we were able to figure out where the extension is,
-       * slice the path into a base and an extension. Use that to
-       * calculate urls for different density environments. Set
-       * values for different environments.
-       */
-      /*
-       * Set a base background for 1x environments.
-       */
       background: url("images/core-competencies-bg_1200.jpg") center top no-repeat;
-      background-size: cover;
-      /*
-       * Create an @2x-ish media query.
-       */
-      /*
-       * Create media queries for all environments that the user has
-       * provided images for.
-       */
-      /*
-       * If anything went wrong trying to separate the file from its
-       * extension, set a background value without doing anything to it.
-       */ } }
+      background-size: cover; } }
   @media screen and (min-width: 43.75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 43.75em) and (min-resolution: 192dpi) {
     .core-competencies {
       background: url("images/core-competencies-bg_1200@2x.jpg") center top no-repeat;
@@ -1074,47 +883,13 @@ a {
 
   @media screen and (min-width: 75em) {
     .core-competencies {
-      /*
-       * Set a counter and get the length of the image path.
-       */
-      /*
-       * Loop ver the image path and figure out the
-       * position of the dot where the extension begins.
-       */
-      /*
-       * If we were able to figure out where the extension is,
-       * slice the path into a base and an extension. Use that to
-       * calculate urls for different density environments. Set
-       * values for different environments.
-       */
-      /*
-       * Set a base background for 1x environments.
-       */
       background: url("images/core-competencies-bg_2000.jpg") center top no-repeat;
-      background-size: cover;
-      /*
-       * Create an @2x-ish media query.
-       */
-      /*
-       * Create media queries for all environments that the user has
-       * provided images for.
-       */
-      /*
-       * If anything went wrong trying to separate the file from its
-       * extension, set a background value without doing anything to it.
-       */ } }
+      background-size: cover; } }
   @media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi) {
     .core-competencies {
       background: url("images/core-competencies-bg_2000@2x.jpg") center top no-repeat;
       background-size: cover; } }
 
-  .core-competencies .overlay {
-    background: rgba(37, 116, 169, 0.8);
-    height: 100%; }
-  .core-competencies .inner {
-    text-align: center;
-    padding-top: 3.75em;
-    padding-bottom: 3.75em; }
   .core-competencies h2 {
     margin-top: 0; }
   .core-competencies ul {
@@ -1127,6 +902,96 @@ a {
       margin-right: 20px;
       padding: .3em;
       border: 1px solid #FFFFFF; }
+
+/*--------------------------------------------------------------
+## Model
+--------------------------------------------------------------*/
+.expertise {
+  margin-top: 7.5em;
+  margin-bottom: 7.5em;
+  background: url("images/expertise-bg_500.jpg") center top no-repeat;
+  background-size: cover; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .expertise {
+      background: url("images/expertise-bg_500@2x.jpg") center top no-repeat;
+      background-size: cover; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .expertise {
+      background: url("images/expertise-bg_500@2x.jpg") center top no-repeat;
+      background-size: cover; } }
+  @media screen and (min-width: 31.25em) {
+    .expertise {
+      background: url("images/expertise-bg_700.jpg") center top no-repeat;
+      background-size: cover; } }
+  @media screen and (min-width: 31.25em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 31.25em) and (min-resolution: 192dpi) {
+    .expertise {
+      background: url("images/expertise-bg_700@2x.jpg") center top no-repeat;
+      background-size: cover; } }
+
+  @media screen and (min-width: 43.75em) {
+    .expertise {
+      background: url("images/expertise-bg_1200.jpg") center top no-repeat;
+      background-size: cover; } }
+  @media screen and (min-width: 43.75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 43.75em) and (min-resolution: 192dpi) {
+    .expertise {
+      background: url("images/expertise-bg_1200@2x.jpg") center top no-repeat;
+      background-size: cover; } }
+
+  @media screen and (min-width: 75em) {
+    .expertise {
+      background: url("images/expertise-bg_2000.jpg") center top no-repeat;
+      background-size: cover; } }
+  @media screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 75em) and (min-resolution: 192dpi) {
+    .expertise {
+      background: url("images/expertise-bg_2000@2x.jpg") center top no-repeat;
+      background-size: cover; } }
+
+  .expertise .big {
+    color: #FFFFFF; }
+
+.proven-model {
+  margin-bottom: 7.5em; }
+  .proven-model .header {
+    border-bottom: 1px solid #EF4836; }
+    .proven-model .header h2 {
+      margin-bottom: 0; }
+  .proven-model ul {
+    margin: 0;
+    list-style-type: square; }
+
+/*--------------------------------------------------------------
+## Community Impact
+--------------------------------------------------------------*/
+.community-impact {
+  margin-top: 7.5em;
+  margin-bottom: 7.5em;
+  text-align: center; }
+  @media screen and (min-width: 62.5em) {
+    .community-impact {
+      text-align: left; }
+      .community-impact .flex-container {
+        display: flex;
+        justify-content: space-between;
+        margin-right: -50px; }
+        .community-impact .flex-container > div {
+          width: 50%;
+          margin-right: 50px; } }
+
+.community-impact__infographic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 3.75em; }
+  .community-impact__infographic p {
+    margin: 0; }
+  .community-impact__infographic > div {
+    margin-bottom: 2.5em;
+    width: 320px; }
+  @media screen and (min-width: 62.5em) {
+    .community-impact__infographic {
+      margin-top: 0; }
+      .community-impact__infographic > div {
+        width: 48%; } }
 
 /*--------------------------------------------------------------
 ## Footer

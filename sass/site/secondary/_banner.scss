@@ -1,0 +1,20 @@
+.banner {
+	color: $color__text-inverted;
+	
+	h2 {
+		color: $color__text-inverted;
+	}
+
+	.overlay {
+		background: $color__background-overlay;
+		height: 100%;
+	}
+
+	.inner {
+		text-align: center;
+		padding: {
+			top: 3.75em;
+			bottom: 3.75em;
+		}
+	}
+}

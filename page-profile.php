@@ -75,7 +75,7 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section class="core-competencies">
+			<section class="core-competencies banner">
 				<div class="overlay">
 					<div class="inner">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/core-competencies-icon.png" alt="Core Competencies Icon" data-rjs="2">

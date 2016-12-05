@@ -1,0 +1,47 @@
+.community-impact {
+	margin: {
+		top: 7.5em;
+		bottom: 7.5em;
+	}
+
+	text-align: center;
+
+	@media screen and ( min-width: 62.5em ) {
+		text-align: left;
+
+		.flex-container {
+			display: flex;
+			justify-content: space-between;
+			margin-right: -50px;
+
+			> div {
+				width: 50%;
+				margin-right: 50px;
+			}
+		}
+	}
+}
+
+.community-impact__infographic {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 3.75em;
+
+	p {
+		margin: 0;
+	}
+
+	> div {
+		margin-bottom: 2.5em;
+		width: 320px;
+	}
+
+	@media screen and ( min-width: 62.5em ) {
+		margin-top: 0;
+
+		> div {
+			width: 48%;
+		}
+	}
+}
