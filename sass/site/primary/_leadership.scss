@@ -1,0 +1,13 @@
+.leadership {
+	img {
+		width: 100%;
+	}
+}
+
+.team-member {
+	margin-bottom: 3.75em;
+
+	.name {
+		border-bottom: 1px solid $color__border-secondary;
+	}
+}

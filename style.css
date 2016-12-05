@@ -39,6 +39,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Profile
 	## Model
 	## Community Impact
+	## Leadership
 	## Footer
 # Infinite scroll
 # Media
@@ -234,8 +235,21 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-.wf-loading {
-  visibility: hidden; }
+section,
+.site-header {
+  opacity: 1;
+  transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+  -webkit-transition: -webkit-transform .4s ease-in-out, opacity .4s ease-in-out; }
+
+.wf-loading section,
+.wf-loading .site-header {
+  opacity: 0;
+  transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -webkit-transform: translateY(-20px); }
 
 body,
 button,
@@ -992,6 +1006,17 @@ a {
       margin-top: 0; }
       .community-impact__infographic > div {
         width: 48%; } }
+
+/*--------------------------------------------------------------
+## Leadership
+--------------------------------------------------------------*/
+.leadership img {
+  width: 100%; }
+
+.team-member {
+  margin-bottom: 3.75em; }
+  .team-member .name {
+    border-bottom: 1px solid #EF4836; }
 
 /*--------------------------------------------------------------
 ## Footer
