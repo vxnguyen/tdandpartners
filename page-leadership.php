@@ -33,7 +33,7 @@ get_header(); ?>
 			<div class="team-member">
 				<div>
 					<?php echo wp_get_attachment_image( get_field('headshot'), 'full'); ?>
-					<h3 class="name"><?php the_field('name'); ?></h3>
+					<div><h3 class="name"><?php the_field('name'); ?></h3></div>
 					<h4><?php the_field('title'); ?></h4>
 					<p><?php the_field('sub-title'); ?></p>
 				</div>

@@ -1011,13 +1011,27 @@ a {
 /*--------------------------------------------------------------
 ## Leadership
 --------------------------------------------------------------*/
-.leadership img {
-  width: 100%; }
+.leadership {
+  margin-bottom: 5.625em;
+  text-align: center; }
+  .leadership img {
+    width: 200px; }
 
 .team-member {
-  margin-bottom: 3.75em; }
+  margin: 0 auto 3.75em auto;
+  max-width: 600px; }
   .team-member .name {
-    border-bottom: 1px solid #EF4836; }
+    border-bottom: 1px solid #EF4836;
+    display: inline-block; }
+  .team-member h4 {
+    margin-top: 0; }
+  @media screen and (min-width: 900px) {
+    .team-member {
+      display: flex;
+      text-align: left;
+      max-width: 800px; }
+      .team-member > div:first-child {
+        width: 400px; } }
 
 /*--------------------------------------------------------------
 ## Footer

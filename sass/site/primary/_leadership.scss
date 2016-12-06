@@ -1,13 +1,32 @@
 .leadership {
+	margin-bottom: 5.625em;
+	text-align: center;
+
 	img {
-		width: 100%;
+		width: 200px;
 	}
 }
 
 .team-member {
-	margin-bottom: 3.75em;
+	margin: 0 auto 3.75em auto;
+	max-width: 600px;
 
 	.name {
 		border-bottom: 1px solid $color__border-secondary;
+		display: inline-block;
+	}
+
+	h4 {
+		margin-top: 0;
+	}
+
+	@media screen and ( min-width: 900px ) {
+		display: flex;
+		text-align: left;
+		max-width: 800px;
+
+		> div:first-child {
+			width: 400px;
+		}
 	}
 }
