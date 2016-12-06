@@ -2,3 +2,102 @@
 ## Links
 --------------------------------------------------------------*/
 @import "links";
+
+.main-navigation {
+	font-family: $font__navigation;
+
+	ul {
+		position: absolute;
+		top: 115px;
+		left: 0;
+		width: 100%;
+		max-height: 0;
+		margin: 0;
+		padding-left: 0;
+		overflow: hidden;
+		list-style: none;
+		background-color: #FFFFFF;
+		-webkit-transition: max-height .8s;
+		-moz-transition: max-height .8s;
+		transition: max-height .8s;
+
+		li {
+			display: block;
+			margin-bottom: 20px;
+			text-align: center;
+
+			> a {
+				display: inline-block;
+				text-decoration: none;
+				color: $color__link-navigation;
+				transition: color .2s;
+
+				&:hover,
+				&.focus {
+					color: $color__link-navigation-hover;
+					transition: color .2s;
+				}
+			}
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__link-navigation-active;
+		font-weight: 700;
+	}
+}
+
+/* Mobile menu hamburger icon */
+.menu-toggle {
+	border: none;
+	background-color: #FFFFFF;
+	box-shadow: none;
+	
+	> div {
+		width: 24px;
+	    height: 4px;
+	    background-color: $color__hamburger;
+	    margin: 4px 0;
+	}
+}
+
+/* Mobile menu */
+.main-navigation.toggled ul {
+	max-height: 240px;
+	-webkit-transition: max-height .8s;
+	-moz-transition: max-height .8s;
+	transition: max-height .8s;
+}
+
+@media screen and (min-width: 53.125em) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		position: relative;
+		top: 0;
+		max-height: inherit;
+		width: inherit;
+		overflow: visible;
+
+		li {
+			display: inline-block;
+			margin: inherit;
+			padding: 0 10px;
+			border-right: 1px solid $color__border-main;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				border-right: none;
+				padding-right: 0;
+			}
+		}
+	}
+}
