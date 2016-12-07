@@ -37,6 +37,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Banner
 	## Hero
 	## Profile
+	## Projects
 	## Model
 	## Community Impact
 	## Leadership
@@ -927,6 +928,70 @@ a {
       margin-right: 20px;
       padding: .3em;
       border: 1px solid #FFFFFF; }
+
+/*--------------------------------------------------------------
+## Project
+--------------------------------------------------------------*/
+.project-image {
+  position: relative; }
+
+.project-location {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #CCCCCC; }
+  .project-location h2, .project-location p {
+    margin: 0; }
+  @media screen and (min-width: 37.5em) {
+    .project-location {
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+      padding: 30px;
+      background: rgba(20, 20, 20, 0.5);
+      border-bottom: 0; }
+      .project-location h2, .project-location p {
+        color: #FFFFFF;
+        margin: 0; } }
+  @media screen and (min-width: 43.75em) {
+    .project-location {
+      padding: 40px; } }
+
+.project-sidebar-content {
+  border-bottom: 1px solid #CCCCCC; }
+  .project-sidebar-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-between; }
+    .project-sidebar-content ul li {
+      width: 40%; }
+  .project-sidebar-content h3 {
+    margin-bottom: 0; }
+  .project-sidebar-content p {
+    margin-top: 0; }
+  @media screen and (min-width: 800px) {
+    .project-sidebar-content {
+      border-bottom: none;
+      border-right: 1px solid #CCCCCC;
+      display: initial; }
+      .project-sidebar-content ul {
+        display: block; }
+        .project-sidebar-content ul li {
+          width: 100%; } }
+
+.project-content {
+  margin-bottom: 7.5em; }
+  @media screen and (min-width: 800px) {
+    .project-content {
+      display: flex;
+      margin-top: 30px; }
+      .project-content > div:first-child {
+        padding-right: 40px;
+        width: 40%; }
+      .project-content > div:last-child {
+        padding-left: 40px; } }
 
 /*--------------------------------------------------------------
 ## Model
