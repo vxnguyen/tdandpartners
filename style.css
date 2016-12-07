@@ -40,6 +40,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Model
 	## Community Impact
 	## Leadership
+	## News
 	## Footer
 # Infinite scroll
 # Media
@@ -455,6 +456,15 @@ img {
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
+
+.read-more-arrow {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid #2574A9;
+  display: inline-block;
+  margin-right: 8px; }
 
 table {
   margin: 0 0 1.5em;
@@ -1012,13 +1022,14 @@ a {
 ## Leadership
 --------------------------------------------------------------*/
 .leadership {
-  margin-bottom: 5.625em;
+  margin-top: 7.5em;
+  margin-bottom: 7.5em;
   text-align: center; }
   .leadership img {
     width: 200px; }
 
 .team-member {
-  margin: 0 auto 3.75em auto;
+  margin: 0 auto 5.625em auto;
   max-width: 600px; }
   .team-member .name {
     border-bottom: 1px solid #EF4836;
@@ -1031,7 +1042,78 @@ a {
       text-align: left;
       max-width: 800px; }
       .team-member > div:first-child {
-        width: 400px; } }
+        width: 200px;
+        margin-right: 30px; }
+      .team-member > div:last-child {
+        width: 570px; } }
+
+/*--------------------------------------------------------------
+## News
+--------------------------------------------------------------*/
+.news {
+  margin-top: 7.5em;
+  margin-bottom: 7.5em;
+  max-width: 900px;
+  margin: 0 auto; }
+
+.news-block {
+  margin-bottom: 2.8125em;
+  padding-bottom: 2.8125em;
+  border-bottom: 1px solid #CCCCCC; }
+  .news-block .news-date {
+    margin-bottom: 0; }
+  .news-block h2 {
+    margin-top: 10px; }
+  .news-block .news-title {
+    margin-bottom: 15px;
+    font-family: "nimbus-sans-extended", sans-serif;
+    font-size: 17.6px;
+    font-size: 1.1rem; }
+    @media screen and (min-width: 34em) {
+      .news-block .news-title {
+        font-size: 20.8px;
+        font-size: 1.3rem; } }
+  @media screen and (min-width: 50em) {
+    .news-block {
+      display: flex;
+      border-bottom: 0;
+      justify-content: space-between; }
+      .news-block > div:first-child {
+        width: 30%;
+        padding-right: 20px;
+        border-right: 1px solid #CCCCCC; }
+      .news-block > div:last-child {
+        width: 70%;
+        padding-left: 40px; } }
+  @media screen and (min-width: 62.5em) {
+    .news-block > div:first-child {
+      width: 30%; }
+    .news-block > div:last-child {
+      width: 70%; } }
+
+.read-more-news-link {
+  font-family: "nimbus-sans-extended", sans-serif;
+  color: #EF4836;
+  text-decoration: none; }
+  .read-more-news-link:visited {
+    color: #EF4836; }
+  .read-more-news-link:hover {
+    color: #EF4836; }
+
+.news-nav {
+  margin: 0 auto 30px auto;
+  width: 250px; }
+
+.prev a,
+.next a {
+  color: #2574A9;
+  text-decoration: none; }
+  .prev a:visited,
+  .next a:visited {
+    color: #2574A9; }
+
+.next {
+  text-align: right; }
 
 /*--------------------------------------------------------------
 ## Footer

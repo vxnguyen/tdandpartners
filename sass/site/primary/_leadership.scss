@@ -1,5 +1,6 @@
 .leadership {
-	margin-bottom: 5.625em;
+	margin-top: 7.5em;
+	margin-bottom: 7.5em;
 	text-align: center;
 
 	img {
@@ -8,7 +9,7 @@
 }
 
 .team-member {
-	margin: 0 auto 3.75em auto;
+	margin: 0 auto 5.625em auto;
 	max-width: 600px;
 
 	.name {
@@ -26,7 +27,12 @@
 		max-width: 800px;
 
 		> div:first-child {
-			width: 400px;
+			width: 200px;
+			margin-right: 30px;
+		}
+
+		> div:last-child {
+			width: 570px;
 		}
 	}
 }
