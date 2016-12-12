@@ -33,10 +33,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
+# Carousel
 # Content
 	## Site Header
 	## Banner
 	## Hero
+	## Front Page
 	## Profile
 	## Projects
 	## Model
@@ -97,6 +99,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Clearings
 --------------------------------------------------------------*/
 @import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+@import "modules/carousel";
 
 /*--------------------------------------------------------------
 # Content
