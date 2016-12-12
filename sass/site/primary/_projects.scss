@@ -12,7 +12,7 @@
 }
 
 .projects-thumbnail-overlay {
-	opacity: 0;
+	display: none;
 	background: rgba(20, 20, 20, .7);
 	position: absolute;
 	width: 100%;
@@ -32,8 +32,7 @@
 	}
 
 	&:hover .projects-thumbnail-overlay {
-		opacity: 1;
-		transition: opacity .5s;
+		display: block;
 	}
 }
 
