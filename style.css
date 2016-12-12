@@ -471,7 +471,8 @@ table {
 # Navigation
 --------------------------------------------------------------*/
 .main-navigation {
-  font-family: "nimbus-sans-extended", sans-serif; }
+  font-family: "nimbus-sans-extended", sans-serif;
+  z-index: 50; }
   .main-navigation ul {
     position: absolute;
     top: 115px;
