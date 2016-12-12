@@ -926,7 +926,7 @@ table {
 .site-header {
   padding-top: 20px;
   padding-bottom: 20px;
-  z-index: 20; }
+  z-index: 100; }
   .site-header .inner {
     display: flex;
     justify-content: space-between;
