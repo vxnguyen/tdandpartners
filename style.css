@@ -1179,14 +1179,8 @@ table {
     flex-wrap: wrap;
     justify-content: center; }
 
-.projects-thumbnail {
-  position: relative;
-  width: 350px;
-  margin-bottom: 10px;
-  margin-right: 15px; }
-
 .projects-thumbnail-overlay {
-  opacity: 0;
+  display: none;
   background: rgba(20, 20, 20, 0.7);
   position: absolute;
   width: 100%;
@@ -1194,6 +1188,14 @@ table {
   top: 0;
   left: 0;
   z-index: 50; }
+
+.projects-thumbnail {
+  position: relative;
+  width: 350px;
+  margin-bottom: 10px;
+  margin-right: 15px; }
+  .projects-thumbnail:hover .projects-thumbnail-overlay {
+    display: block; }
 
 .projects-thumbnail-overlay-content {
   position: absolute;
@@ -1206,16 +1208,6 @@ table {
     color: #FFFFFF; }
   .projects-thumbnail-overlay-content a {
     color: #FFFFFF; }
-
-.projects-thumbnail-overlay:hover {
-  opacity: 1;
-  background: rgba(20, 20, 20, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 50;
-  transition: opacity .5s;
-  cursor: pointer; }
 
 .project-image {
   position: relative; }
