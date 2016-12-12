@@ -30,7 +30,7 @@ get_header(); ?>
 				<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 					<div class="projects-thumbnail">
-						<div class="projects-thumbnail-overlay" onclick="">
+						<div class="projects-thumbnail-overlay">
 							<div class="projects-thumbnail-overlay-content">
 								<h2><?php the_field('name'); ?></h2>
 								<p><?php the_field('type'); ?></p>
