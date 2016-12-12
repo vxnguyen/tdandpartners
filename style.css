@@ -945,6 +945,9 @@ table {
     border-top: 1px solid #CCCCCC;
     border-bottom: 1px solid #CCCCCC; }
 
+.site-content {
+  z-index: 0; }
+
 /*--------------------------------------------------------------
 ## Site Header
 --------------------------------------------------------------*/
