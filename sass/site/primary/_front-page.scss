@@ -1,3 +1,47 @@
-#firm-distinction-container {
-	margin-top: 400px;
+.front-page-content {
+	display: flex;
+	flex-wrap: wrap;
+	margin: {
+		top: 7.5em;
+		bottom: 7.5em;
+	}
+
+	> div {
+		width: 100%;
+	}
+
+	@media screen and ( min-width: 900px ) {
+
+		> div:first-child {
+			width: 66.6666%;
+			padding-right: 1.25em;
+		}
+
+		> div:last-child {
+			width: 33.3333%;
+			padding-left: 1.25em;
+			border-left: 1px solid $color__border-main;
+		}
+	}
+}
+
+.featured-projects h2,
+.firm h2 {
+	margin-top: 0;
+}
+
+.firm a,
+.distinction a {
+	font-family: $font__read-more-link;
+	color: $color__text-secondary;
+	text-decoration: none;
+	margin-left: 20px;
+
+	&:visited {
+		color: $color__text-secondary;
+	}
+
+	&:hover {
+		color: $color__text-secondary;
+	}
 }

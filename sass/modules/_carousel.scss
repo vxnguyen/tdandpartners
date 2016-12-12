@@ -243,10 +243,17 @@
 }
 
 .carousel-caption {
-  position: absolute;
-  
+  height: 400px;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @media screen and ( min-width: 31.25em ) {
+    height: 300px;
+  }
+
+  @media screen and ( min-width: 43.75em ) {
+    height: 250px;
+  }
 }
 
 .carousel-caption:not(#caption-0) {

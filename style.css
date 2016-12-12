@@ -26,9 +26,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Layout
 # Typography
 # Elements
-# Forms
 # Navigation
-	## Links
 # Accessibility
 # Alignments
 # Clearings
@@ -45,10 +43,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Leadership
 	## News
 	## Footer
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -474,100 +468,8 @@ table {
   width: 100%; }
 
 /*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  input[type="number"]:focus,
-  input[type="tel"]:focus,
-  input[type="range"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="week"]:focus,
-  input[type="time"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[type="color"]:focus,
-  textarea:focus {
-    color: #111; }
-
-select {
-  border: 1px solid #ccc; }
-
-textarea {
-  width: 100%; }
-
-/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
 .main-navigation {
   font-family: "nimbus-sans-extended", sans-serif; }
   .main-navigation ul {
@@ -930,9 +832,15 @@ a {
   background-color: #fff; }
 
 .carousel-caption {
-  position: absolute;
+  height: 400px;
   padding-top: 20px;
   padding-bottom: 20px; }
+  @media screen and (min-width: 31.25em) {
+    .carousel-caption {
+      height: 300px; } }
+  @media screen and (min-width: 43.75em) {
+    .carousel-caption {
+      height: 250px; } }
 
 .carousel-caption:not(#caption-0) {
   display: none; }
@@ -1110,8 +1018,38 @@ a {
 /*--------------------------------------------------------------
 ## Front Page
 --------------------------------------------------------------*/
-#firm-distinction-container {
-  margin-top: 400px; }
+.front-page-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 7.5em;
+  margin-bottom: 7.5em; }
+  .front-page-content > div {
+    width: 100%; }
+  @media screen and (min-width: 900px) {
+    .front-page-content > div:first-child {
+      width: 66.6666%;
+      padding-right: 1.25em; }
+    .front-page-content > div:last-child {
+      width: 33.3333%;
+      padding-left: 1.25em;
+      border-left: 1px solid #CCCCCC; } }
+
+.featured-projects h2,
+.firm h2 {
+  margin-top: 0; }
+
+.firm a,
+.distinction a {
+  font-family: "nimbus-sans-extended", sans-serif;
+  color: #EF4836;
+  text-decoration: none;
+  margin-left: 20px; }
+  .firm a:visited,
+  .distinction a:visited {
+    color: #EF4836; }
+  .firm a:hover,
+  .distinction a:hover {
+    color: #EF4836; }
 
 /*--------------------------------------------------------------
 ## Profile
@@ -1536,9 +1474,9 @@ a {
     .site-footer .inner {
       display: flex; }
       .site-footer .inner .site-footer__info {
-        min-width: 380px; }
+        width: 66.6666%; }
       .site-footer .inner .site-footer__contact {
-        min-width: 380px; } }
+        width: 33.3333%; } }
 
 .site-footer__info {
   display: flex;
@@ -1590,82 +1528,5 @@ a {
 .site-footer_icon {
   min-height: 30px;
   min-width: 30px; }
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none; }
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-  display: block; }
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
-
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-.wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%; }
-  .wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-  .wp-caption .wp-caption-text {
-    margin: 0.8075em 0; }
-
-.wp-caption-text {
-  text-align: center; }
-
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em; }
-
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%; }
-  .gallery-columns-2 .gallery-item {
-    max-width: 50%; }
-  .gallery-columns-3 .gallery-item {
-    max-width: 33.33%; }
-  .gallery-columns-4 .gallery-item {
-    max-width: 25%; }
-  .gallery-columns-5 .gallery-item {
-    max-width: 20%; }
-  .gallery-columns-6 .gallery-item {
-    max-width: 16.66%; }
-  .gallery-columns-7 .gallery-item {
-    max-width: 14.28%; }
-  .gallery-columns-8 .gallery-item {
-    max-width: 12.5%; }
-  .gallery-columns-9 .gallery-item {
-    max-width: 11.11%; }
-
-.gallery-caption {
-  display: block; }
 
 /*# sourceMappingURL=style.css.map */
