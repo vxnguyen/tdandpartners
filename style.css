@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Leadership
 	## News
 	## Footer
+	## 404
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -1529,5 +1530,14 @@ table {
 .site-footer_icon {
   min-height: 30px;
   min-width: 30px; }
+
+/*--------------------------------------------------------------
+## 404
+--------------------------------------------------------------*/
+.site-404 {
+  text-align: center;
+  margin-top: 7.5em; }
+  .site-404 .page-content {
+    margin-bottom: 7.5em; }
 
 /*# sourceMappingURL=style.css.map */
