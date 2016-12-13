@@ -37,11 +37,11 @@ get_header(); ?>
 
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-						      <a href="<?php echo get_page_link(86); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/the-muse.jpg" alt="The Muse"></a>
+						      <a href="<?php echo get_page_link(86); ?>"><?php echo wp_get_attachment_image( 104, full); ?></a>
 						    </div>
 
 						    <div class="item">
-						      <a href="<?php echo get_page_link(88); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/the-hilltop.jpg" alt="The HillTop"></a>
+						      <a href="<?php echo get_page_link(88); ?>"><?php echo wp_get_attachment_image( 101, full); ?></a>
 							</div>
 						</div>
 
