@@ -50,13 +50,3 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-
-		<?php
-			if( is_single() ) {
-				global $wp_query;
-				$wp_query->set_404();
-				status_header( 404 );
-				get_template_part( '404' );
-				exit();
-			}
-		?>
