@@ -58,7 +58,7 @@ get_header(); ?>
 						<div id="slider_captions">
                     		<div>
                         		<div id="caption-0" class="carousel-caption">
-                           			<h2>The Muse</h2>
+                           			<h2>The Station at Grant Avenue</h2>
                            			<p>On June 2, 2016, we broke ground on the largest mixed-use new construction project in Plainfield, New Jersey in over 40 years. The $30 million multi-phase development will consist of the construction of a new 44,000 square foot state-of-the-art facility for ABC Supply Company Inc., a major wholesale supplier of building products, followed by the construction of a 5-story multi-family building comprised of 90 residential units. </p>
                         		</div>
 

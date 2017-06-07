@@ -23,28 +23,36 @@ get_header(); ?>
 					</div>
 
 					<div class="community-impact__infographic">
+						<h4>Our projects create an exponential economic and community impact by redeveloping large blighted properties that have a negative value for urban municipalities.</h4>
+
 						<div>
-							<img src="<?php echo get_template_directory_uri(); ?>/images/dollar-sign-icon.png" alt="Dollar Sign Icon" data-rjs="2">
-							<p class="big">1.2 MILLION</p>
-							<p>projected annual increase in new taxation revenue created from developments</p>
+							<div>
+								<img src="<?php echo get_template_directory_uri(); ?>/images/dollar-sign-icon.png" alt="Dollar Sign Icon" data-rjs="2">
+							</div>
+							<div>
+								<h4>305 MILLION</h4>
+								<p>total value of approved projects</p>
+							</div>
 						</div>
 
 						<div>
-							<img src="<?php echo get_template_directory_uri(); ?>/images/construction-icon.png" alt="Construction Icon" data-rjs="2">
-							<p class="big">650,000 SQUARE FEET</p>
-							<p>of blighted and environmentally impaired urban property redeveloped</p>
+							<div>
+								<img src="<?php echo get_template_directory_uri(); ?>/images/construction-icon.png" alt="Construction Icon" data-rjs="2">
+							</div>
+							<div>
+								<h4>15</h4>
+								<p>acres of blighted and environmentally urban property redeveloped</p>
+							</div>
 						</div>
 
 						<div>
-							<img src="<?php echo get_template_directory_uri(); ?>/images/wall-icon.png" alt="Wall Icon" data-rjs="2">
-							<p class="big">500</p>
-							<p>construction jobs created</p>
-						</div>
-
-						<div>
-							<img src="<?php echo get_template_directory_uri(); ?>/images/house-icon.png" alt="House Icon" data-rjs="2">
-							<p class="big">1,103</p>
-							<p>new quality affordable and middle-income housing units created</p>
+							<div>
+								<img src="<?php echo get_template_directory_uri(); ?>/images/house-icon.png" alt="House Icon" data-rjs="2">
+							</div>
+							<div>
+								<h4>1,103</h4>
+								<p>new quality affordable and middle-income housing units created</p>
+							</div>
 						</div>
 					</div>
 				</div>

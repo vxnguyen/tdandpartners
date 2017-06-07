@@ -23,16 +23,26 @@ get_header(); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 					<div class="news-block">
-						<div>
-							<p class="news-date"><?php echo get_the_date( get_option('date_format') ); ?></p>
-							<h2><?php the_field('publication'); ?></h2>
+						<div class="news-image">
+							<?php the_field('news-image'); ?>
 						</div>
 
 						<div>
 							<p class="news-title"><?php the_field('title'); ?></p>
+							<p class="news-date"><?php the_field('publication'); ?> - <?php echo get_the_date( get_option('date_format') ); ?></p>
+						</div>
+
+						<div>
+							<p><?php the_field('excerpt'); ?></p>
 							<a class="read-more-news-link" href="<?php the_field('link'); ?>"><div class="read-more-arrow"></div>Read the article</a>
 						</div>
 					</div>
+
+
+
+
+
+					
 
 				<?php endwhile; ?>
 
