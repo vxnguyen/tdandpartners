@@ -1441,7 +1441,6 @@ table {
   .news-block .news-image {
     background-color: grey;
     width: 100%;
-    height: 200px;
     display: block; }
   .news-block .news-date {
     margin-bottom: 0;
