@@ -1470,7 +1470,7 @@ table {
 
 .news-nav {
   margin: 0 auto 30px auto;
-  width: 250px; }
+  width: 100%; }
 
 .prev a,
 .next a {
