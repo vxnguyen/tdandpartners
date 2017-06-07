@@ -1439,7 +1439,6 @@ table {
     .news-block {
       width: 80%; } }
   .news-block .news-image {
-    background-color: grey;
     width: 100%;
     display: block; }
   .news-block .news-date {
