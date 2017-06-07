@@ -24,7 +24,7 @@ get_header(); ?>
 
 					<div class="news-block">
 						<div class="news-image">
-							<?php the_field('news-image'); ?>
+							<img src="<?php the_field('news-image'); ?>">
 						</div>
 
 						<div>
