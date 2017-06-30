@@ -40,8 +40,8 @@ get_header(); ?>
 								<img src="<?php echo get_template_directory_uri(); ?>/images/construction-icon.png" alt="Construction Icon" data-rjs="2">
 							</div>
 							<div>
-								<h4>15</h4>
-								<p>acres of blighted and environmentally urban property redeveloped</p>
+								<h4>15 ACRES</h4>
+								<p>of blighted and environmentally urban property redeveloped</p>
 							</div>
 						</div>
 
@@ -50,7 +50,7 @@ get_header(); ?>
 								<img src="<?php echo get_template_directory_uri(); ?>/images/house-icon.png" alt="House Icon" data-rjs="2">
 							</div>
 							<div>
-								<h4>1,103</h4>
+								<h4>1,103 UNITS</h4>
 								<p>new quality affordable and middle-income housing units created</p>
 							</div>
 						</div>
